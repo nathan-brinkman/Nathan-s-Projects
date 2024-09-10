@@ -1,0 +1,44 @@
+Nathan Brinkman - CSCI 200 - Turret Defence
+
+Problem Description:
+I did end up changing my final project from what I previous problem proposal.
+I actually ended up changing it a few times due to some problems I thought were to
+large for me to overcome in the limited time I gave myself. Either way I did spend a
+lot of time on this final project. It's a turret defence game inspired by Space
+Invaders. You shoot the enemies as they fall towards the ground if they reach
+the bottom, you lose.
+
+Program Documentation:
+This program requires SFML to run. One conern I have is that my pathway goes
+through two mingw64 folders which is not what most people have. If you look in
+the make file you can see the pathing for windows as well as linux and mac have
+been changed to fit my specific situation. You may need to change that. Otherwise,
+everything else should work and compile just fine. Some features I could add is
+a life system. Right now, once one enemy hits the ground you lose. I would make it
+so you have maybe 3 to 5 lives before you lose because the game is actually quite
+hard. I could also add some upgrades to the gun as your score increases and I could 
+also add more types of enemies. These additions wouldn't be too hard to implement.
+I would just create a variable to count the lives and I would make child classes
+that extend the gun and enemy classes respectively. 
+
+Class Description:
+I have an abstract parent class called movingObject. Any entity the moves extends
+that class. It has two virtual functions- draw and updatePosition. It also has
+protected variables that the child classes can access. This is helpful so I don't
+have to make the same private variable for every class. I have multiple vectors but
+the most important ones are the vectors that hold the enemies and bullets. Both of
+those vectors are a type MovingObject* because both of the classes extend MovingObject.
+I need theses vectors to create and remove enemy/bullet objects as needed.
+
+File I/O:
+There is a file output that tells you your final score. I also take input from the
+keyboard and mouse which is very necessary because it's how you play the game.
+
+Reflection:
+I learned how to create a program from scratch. I had to think about the structure
+of my program which is something we really didn't have to do before. I did a lot
+of bug fixing and problem solving for this project. Especially with SFML, that took
+a lot of time to get working. If I were to do this project again I would have better
+planned what type each variable is because I spent a lot of time having to
+change that. For example, speed was originally an int but I had to change it to a
+double. 
